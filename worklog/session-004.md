@@ -1,5 +1,5 @@
 # Session 004 — Full Speed Integration Sprint
-## 2026-04-13
+## 2026-04-12
 
 ### Objective
 Continue full speed ahead. Check for bottles from Oracle1. Read latest intel and identify highest-value jobs.
@@ -37,7 +37,7 @@ All 8 previously unwired standalone modules now integrated into server.py:
 
 **Wave 2 — Comms & Oversight (commits 7779d1e, 06f3b58):**
 - comms_system.py → cmd_mail, cmd_inbox, cmd_library, cmd_equip
-- agentic_oversight.py → cmd_oversee, cmd_script
+- agentic_oversight.py → cmd_oversed, cmd_script
 
 **Wave 3 — Deep Architecture (commits 2121c27, e3499a6):**
 - tabula_rasa.py → cmd_budget, cmd_cast, cmd_catalog, cmd_install, cmd_ship
@@ -74,3 +74,26 @@ All 8 previously unwired standalone modules now integrated into server.py:
 - Next Oracle1 assignment
 - holodeck-studio PR reviews
 - fleet-integration branch cleanup (obsolete)
+
+
+## Part 2: Tabula Rasa Deep Dive (continued)
+
+### TrustEngine Implementation
+- 5 trust dimensions with exponential temporal decay
+- Composite scoring, leaderboard, profile comparison
+- 101 new tests, commit 92f7da9
+
+### Spell Execution Engine
+- 18 spells with real effects (messages, broadcasts, world changes)
+- Cooldown system per-agent
+- 77 new tests, commit 978e450
+
+### Session Totals
+- 767 tests passing across holodeck-studio
+- 30+ commands in MUD server
+- TABULA-RASA-EXPERTISE.md (582 lines) — definitive reference
+- 7 bugs found and fixed
+- 3 new subsystems: TrustEngine, SpellEngine, TabulaRasaStore
+
+### Key Insight
+The tabula rasa system is an **endowment tree** — authority flows from root (Casey) through trust-based delegation to every agent.
